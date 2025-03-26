@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes full height */
+    padding: 20px; /* Adds some spacing around the content */
+}
+
+.card {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    padding: 30px; /* Increased padding for a more spacious layout */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow for more depth */
+    width: 100%;
+    max-width: 480px; /* Slightly increased max-width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 12px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.search input:focus {
+    background-color: #d1f3f2; /* Lighter background when focused */
+}
+
+.search button {
+    background-color: #ebfffc;
+    border: 0;
+    outline: 0;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #d1f3f2; /* Lighter background on hover */
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.weather-icon {
+    width: 180px; /* Increased icon size for better visibility */
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.weather h1 {
+    font-size: 60px;
+    font-weight: 300; /* Bold weight for emphasis */
+    margin-top: 15px; /* Added some space above */
+}
+
+.weather h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: -10px;
+    color: #f0f0f0; /* Light color for temperature */
+}
+
+.details {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the items */
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 10px --20px; /* Vertical margin for spacing between columns */
+}
+
+.col p {
+    margin-top: 8px;
+    color: #d1d1d1; /* Light gray color for description text */
+}
+
+.col img {
+    margin-bottom: 10px;
+}
+
+.humidity, .wind{
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -6px;
+}
+
+#hero{
+    margin-right: 30px;
+}
+.region{
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media (max-width: 600px) {
+    .card {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .weather h1 {
+        font-size: 60px; /* Smaller font size on smaller screens */
+    }
+
+    .weather h2 {
+        font-size: 40px; /* Smaller font size on smaller screens */
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .col {
+        margin: 20px 0;
+    }
+}
+.weather{
+    display: none;
+}
